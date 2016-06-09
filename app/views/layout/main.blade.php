@@ -41,9 +41,9 @@
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        @yield('posts')
-                        @if (Auth::check())
 
+                        @if (Auth::check())
+                            @yield('posts')
                             <br>
                             <li><a href="/logout">Log Out</a></li>
                         @else
