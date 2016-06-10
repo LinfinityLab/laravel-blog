@@ -43,8 +43,6 @@
                     <ul class="nav navbar-nav navbar-right">
 
                         @if (Auth::check())
-                            @yield('posts')
-                            <br>
                             <li><a href="/logout">Log Out</a></li>
                         @else
                             <li>{{ link_to_route('login','Log In') }}</li>
@@ -58,6 +56,12 @@
     </div>
     @yield('content')
 </div>
+
+@if (Auth::check())
+    @yield('posts')
+    @yield('postDetail')
+@endif
+
 {{HTML::script('http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')}}
 {{HTML::script('http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js')}}
 @show

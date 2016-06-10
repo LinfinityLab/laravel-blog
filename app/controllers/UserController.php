@@ -10,8 +10,8 @@ class UserController extends BaseController {
 
         $user = Auth::user();;
         $posts = $user->post;
-        //return View::make('home')->with('posts',$posts);
-        return View::make('home',compact('posts'));
+        return View::make('home', array('posts'=>$posts, 'username'=>$user->username));
+        //return View::make('home',compact('posts'));
     }
 
     public function getLogin(){
@@ -83,5 +83,9 @@ class UserController extends BaseController {
         return Redirect::route('login')
             ->withInput(Input::except('password'))
             ->with('message','You have successfully logged out!');
+    }
+    
+    public function postDetail() {
+        return View::make('postDetail');
     }
 }

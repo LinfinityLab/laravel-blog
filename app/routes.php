@@ -25,3 +25,5 @@ Route::get('/register', array('as'=>'register', 'uses'=>'UserController@getRegis
 Route::post('/register', array('as'=>'register-post', 'uses'=>'UserController@postRegister'));
 
 Route::get('/logout', array('as'=>'logout','uses'=>'UserController@logout'));
+
+Route::get('/{postid}', array('as'=>'post','uses'=>'UserController@postDetail'));
