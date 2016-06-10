@@ -145,4 +145,19 @@ class UserController extends BaseController {
 
         return Redirect::route('newPost')->withErrors($validator);
     }
+
+    public function deletePost() {
+        $user = Auth::user();
+        $postid = Input::get("postid");
+        $post = Post::find($postid);
+        if ($user == null) { // need it to prevent a non-user accessing a post
+            return View::make('login');
+        } elseif ($post != null) {
+            $post->delete();
+            return Redirect::route('home')->withMessage('The post has been deleted!');
+        } else {
+            return View::make('noPostDetail');
+        }
+
+    }
 }

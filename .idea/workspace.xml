@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58945c8a-c76e-42c5-9770-eaa687b549da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/UserController.php" afterPath="$PROJECT_DIR$/app/controllers/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Post.php" afterPath="$PROJECT_DIR$/app/models/Post.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/editPost.blade.php" afterPath="$PROJECT_DIR$/app/views/editPost.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layout/main.blade.php" afterPath="$PROJECT_DIR$/app/views/layout/main.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/noPostDetail.blade.php" afterPath="$PROJECT_DIR$/app/views/noPostDetail.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/postDetail.blade.php" afterPath="$PROJECT_DIR$/app/views/postDetail.blade.php" />
     </list>
     <ignored path="phpBlog.iws" />
@@ -31,22 +26,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="32" column="24" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="24" />
+            <state relative-caret-position="435">
+              <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="111" column="5" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
+            <state relative-caret-position="682">
+              <caret line="155" column="28" selection-start-line="155" selection-start-column="28" selection-end-line="155" selection-end-column="28" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="postDetail.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/postDetail.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+              <folding>
+                <element signature="e#287#322#0#HTML" expanded="true" />
+                <element signature="e#378#397#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -131,12 +139,12 @@
         <option value="$PROJECT_DIR$/app/views/home.blade.php" />
         <option value="$PROJECT_DIR$/app/views/newPost.blade.php" />
         <option value="$PROJECT_DIR$/app/models/Post.php" />
-        <option value="$PROJECT_DIR$/app/views/postDetail.blade.php" />
         <option value="$PROJECT_DIR$/app/views/noPostDetail.blade.php" />
         <option value="$PROJECT_DIR$/app/views/layout/main.blade.php" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/app/controllers/UserController.php" />
         <option value="$PROJECT_DIR$/app/views/editPost.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/postDetail.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
       </list>
     </option>
   </component>
@@ -418,12 +426,12 @@
       <updated>1465435957229</updated>
       <workItem from="1465435959115" duration="3605000" />
       <workItem from="1465490105030" duration="6568000" />
-      <workItem from="1465506929059" duration="28141000" />
+      <workItem from="1465506929059" duration="28633000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38314000" />
+    <option name="totallyTimeSpent" value="38806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2243" y="-38" width="1260" height="1011" extended-state="0" />
@@ -673,14 +681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/postDetail.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/noPostDetail.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -771,14 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="32" column="24" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Post.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -787,10 +779,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/postDetail.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+          <folding>
+            <element signature="e#287#322#0#HTML" expanded="true" />
+            <element signature="e#378#397#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="111" column="5" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
+        <state relative-caret-position="682">
+          <caret line="155" column="28" selection-start-line="155" selection-start-column="28" selection-end-line="155" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
           <folding />
         </state>
       </provider>

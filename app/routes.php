@@ -35,3 +35,5 @@ Route::post('/updatepost', array('as'=>'update-post','uses'=>'UserController@upd
 Route::get('/newpost', array('as'=>'newPost','uses'=>'UserController@getNewPost'));
 
 Route::post('/newpost', array('as'=>'newPost-post','uses'=>'UserController@postNewPost'));
+
+Route::get('/deletepost', array('as'=>'delete-post','uses'=>'UserController@deletePost'));

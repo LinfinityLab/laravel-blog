@@ -7,6 +7,7 @@
             <span STYLE="font-weight:bold; font-size: 26pt">{{$post->title}}</span> <a href="/editpost/?postid={{$post->id}}">Edit</a>
             <br>
             <span STYLE="color: grey; font-size: 9pt">Edited: {{$post->updated_at}}</span>
+            <span STYLE="float:right"><a href="/deletepost/?postid={{$post->id}}">Delete</a></span>
             <hr>
             <div class="container">
                 <span STYLE="font-size: 14pt">{{$post->content}}</span>
