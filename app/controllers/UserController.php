@@ -9,7 +9,7 @@ class UserController extends BaseController {
     public function home() {
 
         $user = Auth::user();;
-        $posts = $user->post;
+        $posts = $user->post;//->orderBy('updated_at', 'DESC');
         return View::make('home', array('posts'=>$posts, 'username'=>$user->username));
         //return View::make('home',compact('posts'));
     }

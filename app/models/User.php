@@ -30,7 +30,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	}
 
     public function post(){
-        return $this->hasMany('Post');
+        return $this->hasMany('Post')->orderBy('updated_at', 'desc');
     }
 
     public static function validate($input){
