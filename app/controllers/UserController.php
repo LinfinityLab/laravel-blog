@@ -96,7 +96,37 @@ class UserController extends BaseController {
         } else {
             return View::make('noPostDetail');
         }
+    }
 
+    public function editPost() {
+        $user = Auth::user();
+        $postid = Input::get("postid");
+        return View::make('editPost');
+    }
 
+    public function updatePost() {
+        return View::make('home');
+    }
+
+    public function getNewPost() {
+        return View::make('newPost');
+    }
+
+    public function postNewPost() {
+        $user = Auth::user();
+        $validator = Post::validate(Input::all());
+        if ($validator->passes()) {
+            // attempt to register the user
+            Post::create(array(
+                'user_id'=>$user->id,
+                'title'=>Input::get('title'),
+                'content'=>Input::get('content'),
+            ));
+
+            return Redirect::route('home')->withMessage('posted!');
+        }
+
+        return Redirect::route('newPost')->withErrors($validator);
+        //return Redirect::route('home');
     }
 }

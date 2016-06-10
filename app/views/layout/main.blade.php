@@ -64,6 +64,7 @@
 @if (Auth::check())
     @yield('posts')
     @yield('postDetail')
+    @yield('editPost')
 @endif
 
 {{HTML::script('http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')}}

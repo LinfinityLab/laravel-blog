@@ -26,4 +26,12 @@ Route::post('/register', array('as'=>'register-post', 'uses'=>'UserController@po
 
 Route::get('/logout', array('as'=>'logout','uses'=>'UserController@logout'));
 
-Route::get('/post', array('as'=>'post','uses'=>'UserController@postDetail'));
+Route::get('/post', array('as'=>'post-detail','uses'=>'UserController@postDetail'));
+
+Route::get('/editpost', array('as'=>'editPost','uses'=>'UserController@editPost'));
+
+Route::post('/editpost', array('as'=>'edit-update','uses'=>'UserController@updatePost'));
+
+Route::get('/newpost', array('as'=>'newPost','uses'=>'UserController@getNewPost'));
+
+Route::post('/newpost', array('as'=>'newPost-post','uses'=>'UserController@postNewPost'));
