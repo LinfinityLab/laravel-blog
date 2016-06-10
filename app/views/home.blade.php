@@ -9,7 +9,7 @@
             <h3>My Posts</h3>
             <ul class="list-group">
                 @foreach ($posts as $post)
-                    <li class="list-group-item"> <a href="/{{$post->id}}"> {{ $post->title }}</a></li>
+                    <li class="list-group-item"> <a href="/post/?postid={{$post->id}}"> {{ $post->title }}</a></li>
                 @endforeach
             </ul>
         </div>

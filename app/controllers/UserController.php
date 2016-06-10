@@ -86,6 +86,17 @@ class UserController extends BaseController {
     }
     
     public function postDetail() {
-        return View::make('postDetail');
+        $user = Auth::user();
+        $postid = Input::get("postid");
+        $post = Post::find($postid);
+        if ($user == null) {
+            return View::make('login');
+        } elseif ($post != null) {
+            return View::make('postDetail', array('user'=>$user, 'post'=>$post));
+        } else {
+            return View::make('noPostDetail');
+        }
+
+
     }
 }

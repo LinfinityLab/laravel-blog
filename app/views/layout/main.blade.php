@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Library</title>
+    <title>Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{HTML::style('http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')}}
     <style>
@@ -40,6 +40,10 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="/">Home</a></li>
+                    </ul>
+
                     <ul class="nav navbar-nav navbar-right">
 
                         @if (Auth::check())
