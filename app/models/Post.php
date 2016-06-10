@@ -13,7 +13,7 @@ class Post extends Eloquent {
     public static function validate($input){
 
         $rules = array(
-            'title'=>'required|min:3|max:50|alphanum', //|unique:posts ?
+            'title'=>'required|min:3|max:50', //|unique:posts ?
             'content'=>'required|min:3|max:1000'
         );
 

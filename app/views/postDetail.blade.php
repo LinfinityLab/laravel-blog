@@ -10,7 +10,7 @@
             <span STYLE="float:right"><a href="/deletepost/?postid={{$post->id}}">Delete</a></span>
             <hr>
             <div class="container">
-                <span STYLE="font-size: 14pt">{{$post->content}}</span>
+                <span STYLE="font-size: 14pt">{{nl2br(e($post->content))}}</span>
             </div>
         @else
             <span>can't find your post...</span>
