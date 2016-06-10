@@ -1,6 +1,6 @@
 @extends ('layout.main')
 
-@section('postDetail')
+@section('content')
 
     <div class="container">
         can't find the post...

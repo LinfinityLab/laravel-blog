@@ -1,6 +1,6 @@
 @extends ('layout.main')
 
-@section('postDetail')
+@section('content')
 
     <div class="container">
         @if ($user->id == $post->user_id)

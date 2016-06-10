@@ -89,7 +89,7 @@ class UserController extends BaseController {
         $user = Auth::user();
         $postid = Input::get("postid");
         $post = Post::find($postid);
-        if ($user == null) {
+        if ($user == null) { // need it to prevent a non-user accessing a post
             return View::make('login');
         } elseif ($post != null) {
             return View::make('postDetail', array('user'=>$user, 'post'=>$post));
@@ -101,11 +101,28 @@ class UserController extends BaseController {
     public function editPost() {
         $user = Auth::user();
         $postid = Input::get("postid");
-        return View::make('editPost');
+        $post = Post::find($postid);
+        if ($user == null) {
+            return View::make('login');
+        } elseif ($post != null) {
+            return View::make('editPost', array('postid'=>$postid, 'title'=>$post->title, 'content'=>$post->content));
+        } else {
+            return View::make('noPostDetail');
+        }
     }
 
     public function updatePost() {
-        return View::make('home');
+        $user = Auth::user();
+        $postid = Input::get("postid");
+        $post = Post::find($postid);
+        $validator = Post::validate(Input::all());
+        if ($validator->passes()) {
+            // attempt to update the post
+            $newpost = array('title'=>Input::get('title'), 'content'=>Input::get('content'), 'user_id'=>$user->id);
+            $post->update($newpost);
+            return Redirect::route('home')->withMessage('Your post has been updated!');
+        }
+        return Redirect::route('editPost', array('postid'=>$postid, 'title'=>$post->title, 'content'=>$post->content))->withErrors($validator);
     }
 
     public function getNewPost() {
@@ -116,7 +133,7 @@ class UserController extends BaseController {
         $user = Auth::user();
         $validator = Post::validate(Input::all());
         if ($validator->passes()) {
-            // attempt to register the user
+            // attempt to create the new post
             Post::create(array(
                 'user_id'=>$user->id,
                 'title'=>Input::get('title'),
@@ -127,6 +144,5 @@ class UserController extends BaseController {
         }
 
         return Redirect::route('newPost')->withErrors($validator);
-        //return Redirect::route('home');
     }
 }

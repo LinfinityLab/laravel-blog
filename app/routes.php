@@ -30,7 +30,7 @@ Route::get('/post', array('as'=>'post-detail','uses'=>'UserController@postDetail
 
 Route::get('/editpost', array('as'=>'editPost','uses'=>'UserController@editPost'));
 
-Route::post('/editpost', array('as'=>'edit-update','uses'=>'UserController@updatePost'));
+Route::post('/updatepost', array('as'=>'update-post','uses'=>'UserController@updatePost'));
 
 Route::get('/newpost', array('as'=>'newPost','uses'=>'UserController@getNewPost'));
 
